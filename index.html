@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,11 +23,63 @@
     >
 
     <link rel="stylesheet" href="style.css">
-
     <script src="script.js" defer></script>
 </head>
 
 <body>
+
+    <!-- REUSABLE SVG ICONS -->
+    <svg
+        class="svg-definitions"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+        width="0"
+        height="0"
+    >
+        <symbol id="icon-arrow-up-right" viewBox="0 0 24 24">
+            <path
+                d="M7 17 17 7M7 7h10v10"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+        </symbol>
+
+        <symbol id="icon-arrow-down" viewBox="0 0 24 24">
+            <path
+                d="M12 4v16m-7-7 7 7 7-7"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+        </symbol>
+
+        <symbol id="icon-arrow-up" viewBox="0 0 24 24">
+            <path
+                d="M12 20V4m-7 7 7-7 7 7"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+        </symbol>
+
+        <symbol id="icon-spark" viewBox="0 0 24 24">
+            <path
+                d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93 4.93 19.07"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+            />
+        </symbol>
+    </svg>
+
 
     <!-- ANNOUNCEMENT BAR -->
     <div class="announcement-bar">
@@ -36,7 +89,6 @@
 
     <!-- NAVIGATION -->
     <header class="site-header">
-
         <nav class="navbar container">
 
             <a href="#home" class="brand-logo" aria-label="LUCID DRIP home">
@@ -49,6 +101,7 @@
                 aria-label="Open navigation menu"
                 aria-expanded="false"
                 aria-controls="navLinks"
+                type="button"
             >
                 <span></span>
                 <span></span>
@@ -58,9 +111,7 @@
             <div class="nav-links" id="navLinks">
 
                 <a href="#home" class="nav-link">Home</a>
-
                 <a href="#collection" class="nav-link">Collection</a>
-
                 <a href="#story" class="nav-link">Our Story</a>
 
                 <a
@@ -70,19 +121,20 @@
                     rel="noopener noreferrer"
                 >
                     ORDER ON WHATSAPP
-                    <span aria-hidden="true">↗</span>
+
+                    <svg class="icon icon-arrow" aria-hidden="true">
+                        <use href="#icon-arrow-up-right"></use>
+                    </svg>
                 </a>
 
             </div>
-
         </nav>
-
     </header>
 
 
     <main>
 
-        <!-- HERO SECTION WITH AUTOMATIC SLIDESHOW -->
+        <!-- HERO SECTION -->
         <section class="hero" id="home">
 
             <div class="hero-slideshow" aria-hidden="true">
@@ -113,9 +165,7 @@
 
             <div class="hero-content container">
 
-                <p class="hero-eyebrow">
-                    STREETWEAR / NIGERIA
-                </p>
+                <p class="hero-eyebrow">STREETWEAR / NIGERIA</p>
 
                 <h1>
                     STAY SHARP.<br>
@@ -131,7 +181,10 @@
 
                     <a href="#collection" class="button button-accent">
                         EXPLORE COLLECTION
-                        <span aria-hidden="true">↗</span>
+
+                        <svg class="icon icon-arrow" aria-hidden="true">
+                            <use href="#icon-arrow-up-right"></use>
+                        </svg>
                     </a>
 
                     <a
@@ -144,7 +197,6 @@
                     </a>
 
                 </div>
-
             </div>
 
             <div class="hero-bottom">
@@ -162,35 +214,45 @@
                 </div>
 
                 <a href="#collection" class="hero-scroll">
-                    SCROLL TO EXPLORE <span aria-hidden="true">↓</span>
+                    SCROLL TO EXPLORE
+
+                    <svg class="icon icon-down" aria-hidden="true">
+                        <use href="#icon-arrow-down"></use>
+                    </svg>
                 </a>
 
             </div>
-
         </section>
 
 
-        <!-- BRAND BENEFITS STRIP -->
+        <!-- BRAND BENEFITS -->
         <section class="benefits-strip">
 
             <div class="container benefits-inner">
 
                 <p>QUALITY YOU CAN FEEL</p>
 
-                <span class="benefit-divider">✳</span>
+                <span class="benefit-divider" aria-hidden="true">
+                    <svg class="icon icon-spark">
+                        <use href="#icon-spark"></use>
+                    </svg>
+                </span>
 
                 <p>STYLE THAT SPEAKS</p>
 
-                <span class="benefit-divider">✳</span>
+                <span class="benefit-divider" aria-hidden="true">
+                    <svg class="icon icon-spark">
+                        <use href="#icon-spark"></use>
+                    </svg>
+                </span>
 
                 <p>NATIONWIDE DELIVERY</p>
 
             </div>
-
         </section>
 
 
-        <!-- COLLECTION SECTION -->
+        <!-- COLLECTION -->
         <section class="collection-section section-padding" id="collection">
 
             <div class="container">
@@ -238,7 +300,11 @@
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                ORDER THIS FIT <span aria-hidden="true">↗</span>
+                                ORDER THIS FIT
+
+                                <svg class="icon icon-arrow" aria-hidden="true">
+                                    <use href="#icon-arrow-up-right"></use>
+                                </svg>
                             </a>
 
                         </div>
@@ -297,11 +363,14 @@
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                ORDER NOW <span aria-hidden="true">↗</span>
+                                ORDER NOW
+
+                                <svg class="icon icon-arrow" aria-hidden="true">
+                                    <use href="#icon-arrow-up-right"></use>
+                                </svg>
                             </a>
 
                         </div>
-
                     </article>
 
 
@@ -325,7 +394,11 @@
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                ORDER THIS FIT <span aria-hidden="true">↗</span>
+                                ORDER THIS FIT
+
+                                <svg class="icon icon-arrow" aria-hidden="true">
+                                    <use href="#icon-arrow-up-right"></use>
+                                </svg>
                             </a>
 
                         </div>
@@ -384,11 +457,14 @@
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                ORDER NOW <span aria-hidden="true">↗</span>
+                                ORDER NOW
+
+                                <svg class="icon icon-arrow" aria-hidden="true">
+                                    <use href="#icon-arrow-up-right"></use>
+                                </svg>
                             </a>
 
                         </div>
-
                     </article>
 
 
@@ -412,11 +488,16 @@
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                ORDER THIS FIT <span aria-hidden="true">↗</span>
+                                ORDER THIS FIT
+
+                                <svg class="icon icon-arrow" aria-hidden="true">
+                                    <use href="#icon-arrow-up-right"></use>
+                                </svg>
                             </a>
 
                         </div>
 
+                        <!-- TEN ROUND NECK PHOTOS -->
                         <div class="product-gallery" aria-label="Round neck photos">
 
                             <button
@@ -434,7 +515,7 @@
                                 class="gallery-thumb"
                                 type="button"
                                 data-image="images/roundneck-b.jpg"
-                                data-alt="Alternative round neck top style"
+                                data-alt="Round neck top style 2"
                                 aria-label="View round neck photo 2"
                                 aria-pressed="false"
                             >
@@ -445,11 +526,88 @@
                                 class="gallery-thumb"
                                 type="button"
                                 data-image="images/roundneck-c.jpg"
-                                data-alt="Another round neck top style"
+                                data-alt="Round neck top style 3"
                                 aria-label="View round neck photo 3"
                                 aria-pressed="false"
                             >
                                 <img src="images/roundneck-c.jpg" alt="" loading="lazy">
+                            </button>
+
+                            <button
+                                class="gallery-thumb"
+                                type="button"
+                                data-image="images/roundneck-d.jpg"
+                                data-alt="Round neck top style 4"
+                                aria-label="View round neck photo 4"
+                                aria-pressed="false"
+                            >
+                                <img src="images/roundneck-d.jpg" alt="" loading="lazy">
+                            </button>
+
+                            <button
+                                class="gallery-thumb"
+                                type="button"
+                                data-image="images/roundneck-e.jpg"
+                                data-alt="Round neck top style 5"
+                                aria-label="View round neck photo 5"
+                                aria-pressed="false"
+                            >
+                                <img src="images/roundneck-e.jpg" alt="" loading="lazy">
+                            </button>
+
+                            <button
+                                class="gallery-thumb"
+                                type="button"
+                                data-image="images/roundneck-f.jpg"
+                                data-alt="Round neck top style 6"
+                                aria-label="View round neck photo 6"
+                                aria-pressed="false"
+                            >
+                                <img src="images/roundneck-f.jpg" alt="" loading="lazy">
+                            </button>
+
+                            <button
+                                class="gallery-thumb"
+                                type="button"
+                                data-image="images/roundneck-g.jpg"
+                                data-alt="Round neck top style 7"
+                                aria-label="View round neck photo 7"
+                                aria-pressed="false"
+                            >
+                                <img src="images/roundneck-g.jpg" alt="" loading="lazy">
+                            </button>
+
+                            <button
+                                class="gallery-thumb"
+                                type="button"
+                                data-image="images/roundneck-h.jpg"
+                                data-alt="Round neck top style 8"
+                                aria-label="View round neck photo 8"
+                                aria-pressed="false"
+                            >
+                                <img src="images/roundneck-h.jpg" alt="" loading="lazy">
+                            </button>
+
+                            <button
+                                class="gallery-thumb"
+                                type="button"
+                                data-image="images/roundneck-i.jpg"
+                                data-alt="Round neck top style 9"
+                                aria-label="View round neck photo 9"
+                                aria-pressed="false"
+                            >
+                                <img src="images/roundneck-i.jpg" alt="" loading="lazy">
+                            </button>
+
+                            <button
+                                class="gallery-thumb"
+                                type="button"
+                                data-image="images/roundneck-j.jpg"
+                                data-alt="Round neck top style 10"
+                                aria-label="View round neck photo 10"
+                                aria-pressed="false"
+                            >
+                                <img src="images/roundneck-j.jpg" alt="" loading="lazy">
                             </button>
 
                         </div>
@@ -471,11 +629,14 @@
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                ORDER NOW <span aria-hidden="true">↗</span>
+                                ORDER NOW
+
+                                <svg class="icon icon-arrow" aria-hidden="true">
+                                    <use href="#icon-arrow-up-right"></use>
+                                </svg>
                             </a>
 
                         </div>
-
                     </article>
 
 
@@ -499,7 +660,11 @@
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                ORDER THIS FIT <span aria-hidden="true">↗</span>
+                                ORDER THIS FIT
+
+                                <svg class="icon icon-arrow" aria-hidden="true">
+                                    <use href="#icon-arrow-up-right"></use>
+                                </svg>
                             </a>
 
                         </div>
@@ -558,17 +723,18 @@
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                ORDER NOW <span aria-hidden="true">↗</span>
+                                ORDER NOW
+
+                                <svg class="icon icon-arrow" aria-hidden="true">
+                                    <use href="#icon-arrow-up-right"></use>
+                                </svg>
                             </a>
 
                         </div>
-
                     </article>
 
                 </div>
-
             </div>
-
         </section>
 
 
@@ -620,13 +786,14 @@
 
                     <a href="#collection" class="text-link">
                         EXPLORE THE COLLECTION
-                        <span aria-hidden="true">↗</span>
+
+                        <svg class="icon icon-arrow" aria-hidden="true">
+                            <use href="#icon-arrow-up-right"></use>
+                        </svg>
                     </a>
 
                 </div>
-
             </div>
-
         </section>
 
 
@@ -654,7 +821,10 @@
                     rel="noopener noreferrer"
                 >
                     ORDER ON WHATSAPP
-                    <span aria-hidden="true">↗</span>
+
+                    <svg class="icon icon-arrow" aria-hidden="true">
+                        <use href="#icon-arrow-up-right"></use>
+                    </svg>
                 </a>
 
                 <div class="delivery-note">
@@ -663,7 +833,6 @@
                 </div>
 
             </div>
-
         </section>
 
     </main>
@@ -676,6 +845,7 @@
 
             <div class="footer-main">
 
+                <!-- BRAND -->
                 <div class="footer-brand">
 
                     <a href="#home" class="footer-logo">
@@ -686,9 +856,7 @@
                         >
                     </a>
 
-                    <p>
-                        Stay Sharp. Stay Lucid.
-                    </p>
+                    <p>Stay Sharp. Stay Lucid.</p>
 
                     <p class="footer-location">
                         KWASU, Malete · Lagos
@@ -697,95 +865,145 @@
                 </div>
 
 
+                <!-- FOOTER NAVIGATION -->
                 <div class="footer-links">
 
                     <h3>EXPLORE</h3>
 
                     <a href="#home">Home</a>
-
                     <a href="#collection">Collection</a>
-
                     <a href="#story">Our Story</a>
 
                 </div>
 
 
-               
-<div class="footer-links social-links">
+                <!-- SOCIAL LINKS -->
+                <div class="footer-links social-links">
 
-    <h3>CONNECT WITH US</h3>
+                    <h3>CONNECT WITH US</h3>
 
-    <!-- WHATSAPP -->
-    <a
-        href="https://wa.me/message/7DSNGGEET5AND1"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Chat with LUCID DRIP on WhatsApp"
-    >
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.5 0 .1 5.4.1 12c0 2.1.5 4.1 1.6 5.9L0 24l6.3-1.7a12 12 0 0 0 5.8 1.5h.1c6.6 0 12-5.4 12-12a11.9 11.9 0 0 0-3.7-8.3ZM12.1 21.7a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12.1 21.7Zm5.4-7.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6s-.7-1.7-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.8s1.2 3.2 1.4 3.4c.2.2 2.4 3.7 5.8 5.1.8.3 1.4.5 1.8.6.8.2 1.5.2 2 .1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.3-.3-.4-.6-.5Z"/>
-        </svg>
-        <span>WhatsApp</span>
-        <span class="social-arrow" aria-hidden="true">↗</span>
-    </a>
+                    <!-- WHATSAPP -->
+                    <a
+                        href="https://wa.me/message/7DSNGGEET5AND1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Chat with LUCID DRIP on WhatsApp"
+                    >
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.5 0 .1 5.4.1 12c0 2.1.5 4.1 1.6 5.9L0 24l6.3-1.7a12 12 0 0 0 5.8 1.5h.1c6.6 0 12-5.4 12-12a11.9 11.9 0 0 0-3.7-8.3ZM12.1 21.7a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12.1 21.7Zm5.4-7.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6s-.7-1.7-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.8s1.2 3.2 1.4 3.4c.2.2 2.4 3.7 5.8 5.1.8.3 1.4.5 1.8.6.8.2 1.5.2 2 .1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.3-.3-.4-.6-.5Z"
+                            />
+                        </svg>
 
+                        <span>WhatsApp</span>
 
-    <!-- INSTAGRAM -->
-    <a
-        href="https://www.instagram.com/lucid_8941/?vrfl=MXk3Z29xZm9xZXNo&utm_source=qr"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Follow LUCID DRIP on Instagram"
-    >
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-            <rect x="3" y="3" width="18" height="18" rx="5"
-                  fill="none" stroke="currentColor" stroke-width="2"/>
-            <circle cx="12" cy="12" r="4"
-                    fill="none" stroke="currentColor" stroke-width="2"/>
-            <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
-        </svg>
-        <span>Instagram</span>
-        <span class="social-arrow" aria-hidden="true">↗</span>
-    </a>
+                        <span class="social-arrow" aria-hidden="true">
+                            <svg class="icon icon-arrow">
+                                <use href="#icon-arrow-up-right"></use>
+                            </svg>
+                        </span>
+                    </a>
 
 
-    <!-- TIKTOK -->
-    <a
-        href="https://www.tiktok.com/@luciddrip.ng"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Follow LUCID DRIP on TikTok"
-    >
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M19.6 7.1a6.7 6.7 0 0 1-4.1-1.4v8.8a6.5 6.5 0 1 1-6.5-6.5c.5 0 1 .1 1.5.2v3.6a3 3 0 1 0 1.5 2.7V0h3.5c.2 2.4 1.8 4.3 4.1 4.6v2.5Z"
-                  fill="currentColor"/>
-        </svg>
-        <span>TikTok</span>
-        <span class="social-arrow" aria-hidden="true">↗</span>
-    </a>
+                    <!-- INSTAGRAM -->
+                    <a
+                        href="https://www.instagram.com/lucid_8941/?vrfl=MXk3Z29xZm9xZXNo&utm_source=qr"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Follow LUCID DRIP on Instagram"
+                    >
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <rect
+                                x="3"
+                                y="3"
+                                width="18"
+                                height="18"
+                                rx="5"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            />
+
+                            <circle
+                                cx="12"
+                                cy="12"
+                                r="4"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            />
+
+                            <circle
+                                cx="17.5"
+                                cy="6.5"
+                                r="1.2"
+                                fill="currentColor"
+                            />
+                        </svg>
+
+                        <span>Instagram</span>
+
+                        <span class="social-arrow" aria-hidden="true">
+                            <svg class="icon icon-arrow">
+                                <use href="#icon-arrow-up-right"></use>
+                            </svg>
+                        </span>
+                    </a>
 
 
-    <!-- X -->
-    <a
-        href="https://x.com/lucid8320?s=11"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Follow LUCID DRIP on X"
-    >
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.6 5.6 22H2.4l7.3-8.4L1.8 2h6.5l4.5 6.8L18.9 2Zm-1.1 18h1.7L7.3 3.9H5.5L17.8 20Z"
-                  fill="currentColor"/>
-        </svg>
-        <span>X (Twitter)</span>
-        <span class="social-arrow" aria-hidden="true">↗</span>
-    </a>
+                    <!-- TIKTOK -->
+                    <a
+                        href="https://www.tiktok.com/@luciddrip.ng"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Follow LUCID DRIP on TikTok"
+                    >
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M19.6 7.1a6.7 6.7 0 0 1-4.1-1.4v8.8a6.5 6.5 0 1 1-6.5-6.5c.5 0 1 .1 1.5.2v3.6a3 3 0 1 0 1.5 2.7V0h3.5c.2 2.4 1.8 4.3 4.1 4.6v2.5Z"
+                                fill="currentColor"
+                            />
+                        </svg>
 
-</div>
+                        <span>TikTok</span>
 
+                        <span class="social-arrow" aria-hidden="true">
+                            <svg class="icon icon-arrow">
+                                <use href="#icon-arrow-up-right"></use>
+                            </svg>
+                        </span>
+                    </a>
+
+
+                    <!-- X -->
+                    <a
+                        href="https://x.com/lucid8320?s=11"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Follow LUCID DRIP on X"
+                    >
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.6 5.6 22H2.4l7.3-8.4L1.8 2h6.5l4.5 6.8L18.9 2Zm-1.1 18h1.7L7.3 3.9H5.5L17.8 20Z"
+                                fill="currentColor"
+                            />
+                        </svg>
+
+                        <span>X (Twitter)</span>
+
+                        <span class="social-arrow" aria-hidden="true">
+                            <svg class="icon icon-arrow">
+                                <use href="#icon-arrow-up-right"></use>
+                            </svg>
+                        </span>
+                    </a>
+
+                </div>
 
             </div>
 
 
+            <!-- FOOTER BOTTOM -->
             <div class="footer-bottom">
 
                 <p>
@@ -794,13 +1012,16 @@
                 </p>
 
                 <a href="#home" class="back-to-top">
-                    BACK TO TOP ↑
+                    BACK TO TOP
+
+                    <svg class="icon icon-up" aria-hidden="true">
+                        <use href="#icon-arrow-up"></use>
+                    </svg>
                 </a>
 
             </div>
 
         </div>
-
     </footer>
 
 </body>

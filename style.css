@@ -1482,3 +1482,189 @@ a {
 .social-links a:hover .social-arrow {
     color: var(--accent);
 }
+
+
+/* =========================================
+   SVG ICONS
+========================================= */
+
+.svg-definitions {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.icon-wrap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.icon {
+    display: block;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.icon-arrow {
+    width: 15px;
+    height: 15px;
+}
+
+.icon-down,
+.icon-up {
+    width: 15px;
+    height: 15px;
+}
+
+.icon-spark {
+    width: 17px;
+    height: 17px;
+}
+
+.nav-cta,
+.button,
+.image-order-link,
+.product-order-link,
+.text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-order-link {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero-scroll {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.benefit-divider {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-to-top {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+/* =========================================
+   SOCIAL MEDIA SVG ARROWS
+========================================= */
+
+.social-links .social-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-left: auto;
+    color: #777777;
+    transition: color 0.25s ease;
+}
+
+.social-links .social-arrow .icon {
+    width: 15px;
+    height: 15px;
+}
+
+.social-links a:hover .social-arrow {
+    color: var(--accent);
+}
+
+
+/* =========================================
+   HORIZONTAL PRODUCT GALLERIES
+========================================= */
+
+.product-gallery {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    padding: 14px 16px 8px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    scroll-snap-type: x proximity;
+
+    scrollbar-width: thin;
+    scrollbar-color: #555555 #171717;
+}
+
+.gallery-thumb {
+    flex: 0 0 66px;
+    width: 66px;
+    height: 72px;
+    scroll-snap-align: start;
+}
+
+/* Chrome, Edge and Safari scrollbar */
+
+.product-gallery::-webkit-scrollbar {
+    height: 4px;
+}
+
+.product-gallery::-webkit-scrollbar-track {
+    background: #171717;
+}
+
+.product-gallery::-webkit-scrollbar-thumb {
+    background: #555555;
+    border-radius: 10px;
+}
+
+.product-gallery::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}
+
+
+/* =========================================
+   MOBILE GALLERIES AND ICONS
+========================================= */
+
+@media (max-width: 700px) {
+
+    .product-gallery {
+        gap: 8px;
+        padding: 12px 13px 8px;
+    }
+
+    .gallery-thumb {
+        flex: 0 0 61px;
+        width: 61px;
+        height: 65px;
+    }
+
+    .hero-scroll {
+        gap: 5px;
+    }
+
+    .hero-scroll .icon {
+        width: 13px;
+        height: 13px;
+    }
+
+    .benefit-divider .icon {
+        width: 13px;
+        height: 13px;
+    }
+
+    .social-links .social-arrow .icon {
+        width: 14px;
+        height: 14px;
+    }
+}
